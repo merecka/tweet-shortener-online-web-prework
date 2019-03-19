@@ -27,17 +27,15 @@ end
 def word_substituter(tweet)
   # tweet_arry = []
   dictionary_keys_arry = []
-  tweet_arry = tweet.split(' ')
-  tweet_arry.collect do |word|
-    
+  # tweet_arry = tweet.split()
+  tweet.split.collect do |word|
     if dictionary.keys.include?(word)
       word = dictionary[word]
-    
     else
       word
     end
-  end
-  tweet_arry.join(" ")
+  end.join(" ")
+  
 end
 
 # def word_substituter(tweet)
