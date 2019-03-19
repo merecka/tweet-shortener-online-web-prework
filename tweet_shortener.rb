@@ -25,8 +25,8 @@ def dictionary
 end
 
 def word_substituter(tweet)
-  # tweet_arry = []
-  dictionary_keys_arry = []
+  new_tweet_arry = []
+ # dictionary_keys_arry = []
   # tweet_arry = tweet.split()
   tweet.split.collect do |word|
     if dictionary.keys.include?(word)
@@ -34,10 +34,33 @@ def word_substituter(tweet)
     else
       word
     end
-  end.join(" ")
+    new_tweet_arry << word
+  end
+  new_tweet_phrase = new_tweet_arry.join(" ")
+  new_tweet_phrase
+ # end.join(" ")
   
 end
 
+def bulk_tweet_shortener(tweet)
+  new_tweet_arry = []
+  tweet.collect do |phrase|
+    phrase.split.collect do |word|
+      if dictionary.keys.include?(word)
+        word = dictionary[word]
+      else
+        word  
+        binding.pry
+      end
+    end
+    new_tweet_arry << word
+  
+  end
+ 
+  new_tweet_phrase = new_tweet_arry.join(" ")
+  puts new_tweet_phrase
+end
+  
 # def word_substituter(tweet)
 #   tweet_arry = []
 #   dictionary_keys_arry = []
