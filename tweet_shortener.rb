@@ -54,7 +54,7 @@ def bulk_tweet_shortener(tweet)
       end
      new_tweet_arry << word 
     end
-    new_tweet_phrase = new_tweet_arry.join(" ")
+   new_tweet_phrase = new_tweet_arry.join(" ")
    puts new_tweet_phrase
   end
 end
