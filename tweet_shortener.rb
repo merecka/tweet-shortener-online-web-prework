@@ -58,6 +58,24 @@ def bulk_tweet_shortener(tweet)
    puts new_tweet_phrase
   end
 end
+
+def selective_tweet_shortener(tweet)
+  if tweet.length > 140
+    new_tweet_arry = []
+    tweet.split.collect do |word|
+     if dictionary.keys.include?(word)
+      word = dictionary[word]
+     else
+      word
+     end
+     new_tweet_arry << word
+    end
+   new_tweet_phrase = new_tweet_arry.join(" ")
+   new_tweet_phrase
+ else
+   tweet
+  end
+end
   
 # def word_substituter(tweet)
 #   tweet_arry = []
