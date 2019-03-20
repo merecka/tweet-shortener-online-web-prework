@@ -91,9 +91,9 @@ def shortened_tweet_truncator(tweet)
       end
      new_tweet_phrase = new_tweet_arry.join(" ")
      new_tweet_phrase[0..139] + " ..."
-   else
+  else
      tweet
-     
+  end   
 end
 
 
