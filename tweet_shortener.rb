@@ -76,7 +76,11 @@ def selective_tweet_shortener(tweet)
    tweet
   end
 end
-  
+
+
+def shortened_tweet_truncator(tweet)
+  binding.pry
+def
 # def word_substituter(tweet)
 #   tweet_arry = []
 #   dictionary_keys_arry = []
