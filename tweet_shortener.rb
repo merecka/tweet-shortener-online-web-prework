@@ -79,7 +79,22 @@ end
 
 
 def shortened_tweet_truncator(tweet)
-  binding.pry
+  if tweet.length > 140
+      new_tweet_arry = []
+      tweet.split.collect do |word|
+       if dictionary.keys.include?(word)
+        word = dictionary[word]
+       else
+        word
+       end
+       new_tweet_arry << word
+      end
+     new_tweet_phrase = new_tweet_arry.join(" ")
+     new_tweet_phrase
+   else
+     tweet
+    end
+  end
 end
 
 
