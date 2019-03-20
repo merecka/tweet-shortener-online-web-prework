@@ -76,20 +76,24 @@ def selective_tweet_shortener(tweet)
    tweet
   end
 end
-  
-# def word_substituter(tweet)
-#   tweet_arry = []
-#   dictionary_keys_arry = []
-#   tweet_arry << tweet.split(' ')
-#   dictionary_keys_arry << dictionary.keys
-#   tweet_arry.each do |word|
-#     dictionary_keys_arry.each do |x|
-#       binding.pry
-#       if word.include?(x)
-        
-#         tweet_arry << original_words[word]
-#       end  
-#     end
-#   end
-# tweet_arry.join(" ")
-# end
+
+
+def shortened_tweet_truncator(tweet)
+  if tweet.length > 140
+      new_tweet_arry = []
+      tweet.split.collect do |word|
+       if dictionary.keys.include?(word)
+        word = dictionary[word]
+       else
+        word
+       end
+       new_tweet_arry << word
+      end
+     new_tweet_phrase = new_tweet_arry.join(" ")
+     new_tweet_phrase[0..135] + " ..."
+  else
+     tweet
+  end   
+end
+
+
