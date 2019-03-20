@@ -93,8 +93,7 @@ def shortened_tweet_truncator(tweet)
      new_tweet_phrase[0..139] + " ..."
    else
      tweet
-    end
-  end
+     
 end
 
 
