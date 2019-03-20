@@ -97,19 +97,3 @@ def shortened_tweet_truncator(tweet)
 end
 
 
-# def word_substituter(tweet)
-#   tweet_arry = []
-#   dictionary_keys_arry = []
-#   tweet_arry << tweet.split(' ')
-#   dictionary_keys_arry << dictionary.keys
-#   tweet_arry.each do |word|
-#     dictionary_keys_arry.each do |x|
-#       binding.pry
-#       if word.include?(x)
-        
-#         tweet_arry << original_words[word]
-#       end  
-#     end
-#   end
-# tweet_arry.join(" ")
-# end
