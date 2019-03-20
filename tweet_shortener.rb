@@ -15,7 +15,8 @@ def dictionary
     "to"=>'2',
     "two"=> '2',
     "too"=> '2',
-    "for"=> '4',
+    "For" => '4',
+    "for" => '4',
     "four"=> '4',
     'be'=> 'b',
     'you'=> 'u',
@@ -43,22 +44,19 @@ def word_substituter(tweet)
 end
 
 def bulk_tweet_shortener(tweet)
-  new_tweet_arry = []
   tweet.collect do |phrase|
+   new_tweet_arry = []
     phrase.split.collect do |word|
       if dictionary.keys.include?(word)
         word = dictionary[word]
       else
-        word  
-        binding.pry
+        word    
       end
+     new_tweet_arry << word 
     end
-    new_tweet_arry << word
-  
+    new_tweet_phrase = new_tweet_arry.join(" ")
+   puts new_tweet_phrase
   end
- 
-  new_tweet_phrase = new_tweet_arry.join(" ")
-  puts new_tweet_phrase
 end
   
 # def word_substituter(tweet)
